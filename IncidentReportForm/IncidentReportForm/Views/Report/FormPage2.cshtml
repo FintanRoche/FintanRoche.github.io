@@ -1,0 +1,27 @@
+﻿@model Reports
+@using Microsoft.AspNetCore.Identity
+
+@inject UserManager<IdentityUser> UserManager
+<body>
+    <div class="container1">
+
+        @UserManager.GetUserId(User)
+        <form asp-action="Submit" method="post" role="form">
+
+            <partial name="_ReportPage1" />
+            <div class=" form-group row">
+                <label asp-for="IncidentLocation" class="col-md-2 control-label"></label>
+                <div class="col-md-5">
+                    <input asp-for="IncidentLocation" class="form-control" />
+                </div>
+            </div>
+            <input asp-for="User" type="hidden" value="@UserManager.Users.FirstOrDefault()" />
+            <div class="form-group row">
+                <div class="col-md-offset-2 col-md-5">
+                    <input type="submit" class="btn btn-primary" value="Next" />
+                </div>
+            </div>
+
+        </form>
+    </div>
+</body>

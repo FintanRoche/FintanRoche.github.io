@@ -1,0 +1,32 @@
+﻿@model DisplayViewModel
+
+    <table id="table12">
+        <tr>
+            <th>
+                Incident Type
+            </th>
+            <th>
+                PRN
+            </th>
+            <th>
+                PRN medication
+            </th>
+            <th>
+                First Name
+            </th>
+            <th>
+                Second Name
+            </th>
+            <th colspan="2">
+                Subject Type
+            </th>
+
+        </tr>
+
+        @foreach (var line in Model.Reports)
+        {
+            @if ((line.PRN_Medication == Model.search && line.PRN_Medication != null) || (line.Principal.FirstName== Model.firstName && line.Principal.FirstName!= null  ))
+            {
+                <partial name="_ReportTable" model="line" />
+            }}
+        </table>

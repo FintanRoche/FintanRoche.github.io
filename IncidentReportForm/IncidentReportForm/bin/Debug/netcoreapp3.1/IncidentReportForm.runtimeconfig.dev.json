@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\finta\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\finta\\.nuget\\packages"
+    ]
+  }
+}

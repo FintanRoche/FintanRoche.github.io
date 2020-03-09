@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200303125247_ManagerLogin.cs" />
+    <Compile Remove="Migrations\20200303125247_ManagerLogin.Designer.cs" />
+    <Compile Remove="Migrations\20200307170739_AttributesCompleted.cs" />
+    <Compile Remove="Migrations\20200307170739_AttributesCompleted.Designer.cs" />
+    <Compile Remove="Migrations\20200307171920_1.cs" />
+    <Compile Remove="Migrations\20200307171920_1.Designer.cs" />
+    <Compile Remove="Migrations\20200307172140_Attributes-Added.cs" />
+    <Compile Remove="Migrations\20200307172140_Attributes-Added.Designer.cs" />
+    <Compile Remove="Migrations\20200307172513_Attributesadded.cs" />
+    <Compile Remove="Migrations\20200307172513_Attributesadded.Designer.cs" />
+    <Compile Remove="Migrations\20200307172907_Attributesadd.cs" />
+    <Compile Remove="Migrations\20200307172907_Attributesadd.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+
+
+</Project>

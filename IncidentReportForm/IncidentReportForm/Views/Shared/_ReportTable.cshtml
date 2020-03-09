@@ -1,0 +1,72 @@
+﻿@model Reports
+
+    <tr>
+        <td>
+            @if (!String.IsNullOrEmpty(@Model.IncidentType))
+            {
+                @Model.IncidentType}
+            else
+            {
+
+                <p>---</p>
+
+            }
+
+        </td>
+        <td>
+
+            @Model.PRNBool
+
+        </td>
+        <td>
+            @if (!String.IsNullOrEmpty(@Model.PRN_Medication))
+            {
+                @Model.PRN_Medication}
+               else
+            {
+               
+                <p>---</p>
+
+            }
+        </td>
+        <td>
+
+            @if (!String.IsNullOrEmpty(@Model.Principal.FirstName))
+            {
+                @Model.Principal.FirstName
+            }
+            else
+            {
+                <p>---</p>
+            }
+
+        </td>
+
+
+        <td>
+
+            @if (!String.IsNullOrEmpty(@Model.Principal.LastName))
+            {
+                @Model.Principal.LastName
+            }
+            else
+            {
+                <p>---</p>
+            }
+        </td>
+        <td>
+            @if (!String.IsNullOrEmpty(@Model.Principal.SubjectType)) { 
+                @Model.Principal.SubjectType}
+            else
+            {
+               
+                <p>---</p>
+
+            }
+        </td>
+        <td>
+            <a asp-controller="Report"
+               asp-action="Details"
+               asp-route-reportId="@Model.ReportId"> more </a>
+    </td>
+            </tr>
